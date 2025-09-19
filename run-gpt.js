@@ -1,3 +1,5 @@
 let runGPT = require("./chatgpt-assessment.js");
 
-runGPT("AAPL");
+let symbol = process.argv.slice(2)[0];
+
+runGPT(symbol);

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const chatgptAssessment = require("../chatgpt-assessment");
 const Schema = mongoose.Schema;
 
 const StockDataSchema = new Schema({
@@ -14,7 +15,12 @@ const StockDataSchema = new Schema({
     iexStatusLastUpdated: { type: Date },
     valueSearchScore: {type: Object},
     valueSearchScoreLastUpdated: {type: Date},
-    valueSearchScoreHistory: {type: Array}
+    valueSearchScoreHistory: {type: Array},
+    chatGptAssessment: {type: String},
+    chatGptRating: {type: String},
+    chatGptRatingHistory: {type: Array},
+    chatGptAssessmentLastUpdated: {type: Date},
+    chatGptRatingHistory: {type: Array}
 })
 
 const StockData = mongoose.model("StockData", StockDataSchema);
